@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+
+
 import random
+
 
 def ask_input_to_user(msg):
     try:
