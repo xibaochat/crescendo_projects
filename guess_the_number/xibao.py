@@ -23,4 +23,6 @@ def guess_the_number():
             number_given_by_user = ask_input_to_user('Too low, try again: ')
     print('Felicitation!')
 
-guess_the_number()
+ 
+ if __name__ in '__main__':
+    guess_the_number()
