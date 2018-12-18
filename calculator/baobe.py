@@ -14,19 +14,19 @@ def ask_function_to_user():
         return ask_function_to_user()
     return user_input
 
-def do_operation(a, b, function_from_user):
-    if function_from_user == 'add':
-        result = a + b
-    elif function_from_user == 'subtract':
-        result = a - b
-    elif function_from_user == 'multiply':
-        result = a * b
-    elif function_from_user == 'divid':
-        result = a / b
-    print(result)
+def do_operation(a,b,operation):
+    if operation  == 'add':
+        print( a + b)
+    elif operation == 'subtract':
+        print( a - b)
+    elif operation == 'multiply':
+        print( a * b)
+    else:
+        print(a / b)
 
-    
-a, b = ask_input_to_user()
-operation = ask_function_to_user()
 
+if __name__ in '__main__':
+    a, b = ask_input_to_user()
+    operation = ask_function_to_user()
+    do_operation(a, b, operation)
 
