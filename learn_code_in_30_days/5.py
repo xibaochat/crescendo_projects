@@ -1,16 +1,16 @@
-#!/bin/python3
-
 import math
-import os
-import random
-import re
-import sys
-if __name__ == '__main__':
-    try:
-        n = int(input())
-    except:
-        exit('not an int')
-    for i in range(1, 11):
-        a = n * i
-        print("{} x {} = {}".format(n, i, a))
-                                            
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n* factorial(n-1)
+
+def calculate_value(m, n):
+    value =  (math.exp(-1 * m) * (m**n)) / factorial(n)
+    return round(value, 3)
+m = float(input())
+n = float(input())          
+
+
+print(calculate_value(m, n))
+            
