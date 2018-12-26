@@ -1,0 +1,19 @@
+from scipy.special import erf
+from math import sqrt
+def cumulative_possibility(x):
+    if 1/2 + (1/2)*erf(x)*(x - normal_distribution_mean) / (sqrt(2*(standard_deviation))) < 0:
+        return 1/2 + (1/2)*erf(x)*(normal_distribution_mean -x ) / (sqrt(2*(standard_deviation)))
+    return 1/2 + (1/2)*erf(x)*(x - normal_distribution_mean) / (sqrt(2*(standard_deviation)))
+
+
+normal_distribution_mean, standard_deviation = list[map(float, input().split())]
+
+assemble_time_a = float(input())
+
+assemble_time_b, assemble_time_c = list[map(float, input().split())]
+
+cumulative_possibility_a = round(cumulative_possibility(assemble_time_b), 3)
+cumulative_possibility_b = round((cumulative_possibility(assemble_time_c) - cumulative_possibility(assemble_time_b)), 3)
+
+print(cumulative_possibility_a, cumulative_possibility_b)
+                
