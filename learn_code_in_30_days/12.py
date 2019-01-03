@@ -12,7 +12,7 @@ class Student(Person):
         Person.__init__(self, firstname, lastname, idnumber)
         self.scores = scores
     def calculate(self):
-        ave = sum(scores)/len(scores)
+        ave = sum(self.scores)/len(self.scores)
         if ave >= 90 and ave <=100:
             return 'O'
         elif ave >= 80 and ave < 90:
