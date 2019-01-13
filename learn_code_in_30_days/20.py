@@ -15,8 +15,8 @@ num_swap = 0
 for i in range(n):
     for j in range(n-1):
         if a[j] > a[j + 1]:
-            c = a[i +1]
-            a[i + 1] = a[i]
-            a[i] = c
+            c = a[j +1]
+            a[j + 1] = a[j]
+            a[j] = c
             num_swap += 1
 print('Array is sorted in {0} swaps.\nFirst Element: {1}\nLast Element: {2}'.format(num_swap, a[0], a[-1]))
